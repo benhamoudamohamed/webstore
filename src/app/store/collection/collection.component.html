@@ -1,0 +1,25 @@
+<app-spinner *ngIf="loadingSpinner === true"></app-spinner>
+<div *ngIf="loadingSpinner === false">
+  <h2 *ngIf="products.length === 0">No products yet</h2>
+
+  <div *ngIf="products.length !== 0">
+    <div class="container">
+      <nb-card status="info" class="flex-item" *ngFor="let product of products">
+        <nb-card-header style="position: relative;">
+          {{product.name}}
+          <nb-badge [text]="product.productCode" status="success" position="top left"></nb-badge>
+          <nb-badge *ngIf="product.isAvailable === false" text="Out Of Stock" status="danger" position="top right"></nb-badge>
+        </nb-card-header>
+        <nb-card-body>
+          <img src="{{product.fileURL}}" alt="{{product.fileName}}">
+        </nb-card-body>
+        <nb-card-footer>
+          {{product.price}} TND
+        </nb-card-footer>
+        <nb-card-footer>
+          <button nbButton fullWidth shape="semi-round" status="primary" size="medium" (click)="addTocart(product.id)" [disabled]="product.isAvailable === false"><nb-icon icon="shopping-cart-outline"></nb-icon></button>
+        </nb-card-footer>
+      </nb-card>
+    </div>
+  </div>
+</div>

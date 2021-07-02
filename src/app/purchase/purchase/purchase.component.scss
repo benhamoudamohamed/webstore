@@ -1,0 +1,53 @@
+nb-card {
+  text-align: center;
+  justify-content: center;
+  margin: 5% 0%;
+  width: 100%;
+}
+img {
+  margin: 0% 0%;
+  width: 100%;
+  height: 300px;
+}
+
+.tableStyle {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tableStyle td, .tableStyle th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.tableStyle th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  tex-align: center;
+}
+
+nb-card-footer {
+  justify-content: start;
+  width: 100%;
+}
+button {
+  text-align: center;
+  width: 30%;
+}
+
+@media screen and (max-width: 600px) {
+  nb-card {
+    width: 100%;
+    margin: 0% 0%;
+  }
+  nb-card-header h3 {
+    font-size: 10px;
+  }
+  * {
+    font-size: 9px;
+  }
+  button {
+    text-align: center;
+    width: 50%;
+  }
+}

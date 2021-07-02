@@ -1,0 +1,56 @@
+<div class="contact" >
+  <div class="header">
+    <h4>CONTACTEZ-NOUS</h4>
+  </div>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+    <div>
+      <input nbInput fullWidth shape="round" id="fullname" type="text" formControlName="fullname" [ngClass]="{ 'is-invalid': submitted && f.fullname.errors }">
+      <label for="fullname">Full Name <span aria-hidden="true"> *</span></label>
+      <div *ngIf="submitted && f.fullname.errors" class="invalid-feedback">
+        <div *ngIf="f.fullname.errors.required">Full Name is required</div>
+        <div *ngIf="f.fullname.errors">Name min length 4 characters</div>
+      </div>
+    </div>
+    <div>
+      <input nbInput fullWidth shape="round" id="email" type="email" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+      <label for="email">Email <span aria-hidden="true"> *</span></label>
+      <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+        <div *ngIf="f.email.errors.required">Email is required</div>
+        <div *ngIf="f.email.errors">Please add a valid email address</div>
+      </div>
+    </div>
+    <div>
+      <input nbInput fullWidth shape="round" id="phone" type="text" formControlName="phone" minlength=8 maxlength=12 (keypress)="keyPress($event)" [ngClass]="{ 'is-invalid': submitted && f.phone.errors }">
+      <label for="fullname">Phone <span aria-hidden="true"> *</span></label>
+      <div *ngIf="submitted && f.phone.errors" class="invalid-feedback">
+        <div *ngIf="f.phone.errors.required">Phone is required</div>
+        <div *ngIf="f.phone.errors">Phone Number must be between 8 and 13 digit</div>
+      </div>
+    </div>
+    <div>
+      <input nbInput fullWidth shape="round" id="subject" type="text" formControlName="subject" [ngClass]="{ 'is-invalid': submitted && f.subject.errors }">
+      <label for="fullname">Subject <span aria-hidden="true"> *</span></label>
+      <div *ngIf="submitted && f.subject.errors" class="invalid-feedback">
+        <div *ngIf="f.subject.errors.required">Subject is required</div>
+        <div *ngIf="f.subject.errors">Subject min length 4 characters</div>
+      </div>
+    </div>
+    <div>
+      <textarea nbInput fullWidth shape="round" id="message" type="text" formControlName="message" [ngClass]="{ 'is-invalid': submitted && f.message.errors }"></textarea>
+      <label for="message">Message <span aria-hidden="true"> *</span></label>
+      <div *ngIf="submitted && f.message.errors" class="invalid-feedback">
+        <div *ngIf="f.message.errors.required">Message is required</div>
+        <div *ngIf="f.message.errors">Message min length 4 characters</div>
+      </div>
+    </div>
+
+    <div class="feedback">
+      <span> {{ feedback }} </span>
+    </div>
+    <button [nbSpinner]="loadingSpinner" nbSpinnerSize="medium" nbSpinnerStatus="danger" nbButton shape="round" size="medium" status="success" type="submit" >
+      <span *ngIf="loadingSpinner === false">Send</span>
+      <span *ngIf="loadingSpinner === true" [nbSpinner]="loadingSpinner">Sending...</span>
+    </button>
+  </form>
+</div>

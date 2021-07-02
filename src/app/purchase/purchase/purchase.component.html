@@ -1,0 +1,54 @@
+<app-spinner *ngIf="loadingSpinner === true"></app-spinner>
+<div *ngIf="loadingSpinner === false; purchase">
+  <nb-card>
+    <nb-card-header>
+      <h3>{{ purchase.clientName }}</h3>
+      <ul *ngFor="let item of purchase.items">
+        <!-- <li> {{ item}} </li> -->
+        <li> Name {{ item.productName}} </li>
+        <li> Cost {{ item.cost}} </li>
+      </ul>
+    </nb-card-header>
+    <nb-card-body>
+      <table class="tableStyle">
+        <tr>
+          <th>Order Number</th>
+          <th>Product Name</th>
+          <th>Image</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Cost</th>
+          <th>Subtotal</th>
+          <th>Coupon</th>
+          <th>Discount</th>
+          <th>Grand Total</th>
+          <th>Client Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Address</th>
+          <th>Created Date</th>
+        <tr>
+          <td>{{ purchase.id }}</td>
+          <td>{{ purchase.productName }}</td>
+          <td>{{ purchase.image }}</td>
+          <td>{{ purchase.price }}</td>
+          <td>{{ purchase.quantity }}</td>
+          <td>{{ purchase.cost }}</td>
+          <td>{{ purchase.subtotal }}</td>
+          <td>{{ purchase.coupon }}</td>
+          <td>{{ purchase.discount }}</td>
+          <td>{{ purchase.grandTotal }}</td>
+          <td>{{ purchase.clientName }}</td>
+          <td>{{ purchase.email }}</td>
+          <td>{{ purchase.phone }}</td>
+          <td>{{ purchase.address }}</td>
+          <td>{{ purchase.created | date }}</td>
+        </tr>
+      </table>
+    </nb-card-body>
+    <nb-card-footer>
+      <button nbButton shape="rectangle" outline status="success" size="medium" (click)="update(purchase.id)"><nb-icon icon="edit-2-outline"></nb-icon></button>
+      <button nbButton shape="rectangle" outline status="success" size="medium" (click)="delete(purchase.id)"><nb-icon icon="trash-2-outline"></nb-icon></button>
+    </nb-card-footer>
+  </nb-card>
+</div>

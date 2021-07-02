@@ -1,0 +1,92 @@
+<!-- <div class="centerElement">
+  <h3 class="titlecenter">{{this.title}}</h3>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+    <div>
+      <input nbInput fullWidth shape="round" required id="productName" type="text" formControlName="productName" [ngClass]="{ 'is-invalid': submitted && f.productName.errors }">
+      <label for="productName">Product Name <span aria-hidden="true">*</span></label>
+      <div *ngIf="submitted && f.productName.errors" class="invalid-feedback">
+        <div *ngIf="f.productName.errors.required">Product Name is required</div>
+      </div>
+    </div>
+
+    <div>
+      <input nbInput fullWidth shape="round" id="price" type="number" formControlName="price" [ngClass]="{ 'is-invalid': submitted && f.price.errors }">
+      <label for="price">Price <span aria-hidden="true">*</span></label>
+      <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+        <div *ngIf="f.price.errors.required">Price is required</div>
+      </div>
+    </div>
+
+    <div>
+      <input nbInput fullWidth shape="round" id="quantity" type="number" formControlName="quantity" [ngClass]="{ 'is-invalid': submitted && f.quantity.errors }">
+      <label for="quantity">Quantity <span aria-hidden="true">*</span></label>
+      <div *ngIf="submitted && f.quantity.errors" class="invalid-feedback">
+        <div *ngIf="f.quantity.errors.required">Quantity is required</div>
+      </div>
+    </div>
+
+    <div>
+      <input nbInput fullWidth shape="round" id="total" type="number" formControlName="total" [ngClass]="{ 'is-invalid': submitted && f.total.errors }">
+      <label for="total">Total <span aria-hidden="true">*</span></label>
+      <div *ngIf="submitted && f.total.errors" class="invalid-feedback">
+        <div *ngIf="f.total.errors.required">Total is required</div>
+      </div>
+    </div>
+
+    <div>
+      <input nbInput fullWidth shape="round" id="discount" type="number" formControlName="discount" [ngClass]="{ 'is-invalid': submitted && f.discount.errors }">
+      <label for="discount">Discount <span aria-hidden="true">*</span></label>
+      <div *ngIf="submitted && f.discount.errors" class="invalid-feedback">
+        <div *ngIf="f.discount.errors.required">Discount is required</div>
+      </div>
+    </div>
+
+    <div>
+      <input nbInput fullWidth shape="round" id="grandTotal" type="number" formControlName="grandTotal" [ngClass]="{ 'is-invalid': submitted && f.grandTotal.errors }">
+      <label for="grandTotal">Grand Total <span aria-hidden="true">*</span></label>
+      <div *ngIf="submitted && f.grandTotal.errors" class="invalid-feedback">
+        <div *ngIf="f.grandTotal.errors.required">Grand Total is required</div>
+      </div>
+    </div>
+
+    <div>
+      <input nbInput fullWidth shape="round" required id="clientName" type="text" formControlName="clientName" [ngClass]="{ 'is-invalid': submitted && f.clientName.errors }">
+      <label for="clientName">Client Name <span aria-hidden="true">*</span></label>
+      <div *ngIf="submitted && f.clientName.errors" class="invalid-feedback">
+        <div *ngIf="f.clientName.errors.required">Client Name is required</div>
+      </div>
+    </div>
+
+    <div>
+      <input nbInput fullWidth shape="round" required id="email" type="text" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+      <label for="email">Email <span aria-hidden="true">*</span></label>
+      <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+        <div *ngIf="f.email.errors.required">Email is required</div>
+      </div>
+    </div>
+
+    <div>
+      <input nbInput fullWidth shape="round" required id="phone" type="text" formControlName="phone" [ngClass]="{ 'is-invalid': submitted && f.phone.errors }">
+      <label for="phone">Phone <span aria-hidden="true">*</span></label>
+      <div *ngIf="submitted && f.phone.errors" class="invalid-feedback">
+        <div *ngIf="f.phone.errors.required">Phone is required</div>
+      </div>
+    </div>
+
+    <div>
+      <input nbInput fullWidth shape="round" required id="address" type="text" formControlName="address" [ngClass]="{ 'is-invalid': submitted && f.address.errors }">
+      <label for="address">Address <span aria-hidden="true">*</span></label>
+      <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+        <div *ngIf="f.address.errors.required">Address is required</div>
+      </div>
+    </div>
+
+    <div class="invalid-feedback">
+      <span> {{ queryError }} </span>
+    </div>
+    <button [nbSpinner]="loadingSpinner" nbSpinnerSize="medium" nbSpinnerStatus="danger" nbButton shape="round" size="medium" status="success" type="submit" [disabled]="form.invalid">
+      <span *ngIf="loadingSpinner === false">Save</span>
+      <span *ngIf="loadingSpinner === true" [nbSpinner]="loadingSpinner">Loading...</span>
+    </button>
+  </form>
+</div> -->

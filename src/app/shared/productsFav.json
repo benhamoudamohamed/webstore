@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "productCode": "hub",
+    "name": "product 1",
+    "price": 59,
+    "isFavorite": true,
+    "isAvailable": true,
+    "fileName": "Ergonomic Concrete Pizza",
+    "fileURL": "../../assets/splash.jpg",
+    "created": "2021-06-21T14:13:18.762Z"
+  },
+  {
+    "id": 2,
+    "productCode": "sdf4e",
+    "name": "product 2",
+    "price": 5,
+    "isFavorite": true,
+    "isAvailable": true,
+    "fileName": "Ergonomic Concrete Pizza",
+    "fileURL": "../../assets/splash.jpg",
+    "created": "2021-06-21T14:13:18.762Z"
+  },
+  {
+    "id": 5,
+    "productCode": "4dhub",
+    "name": "product 5",
+    "price": 150,
+    "isFavorite": true,
+    "isAvailable": true,
+    "fileName": "Ergonomic Concrete Pizza",
+    "fileURL": "../../assets/splash.jpg",
+    "created": "2021-06-21T14:13:18.762Z"
+  },
+  {
+    "id": 6,
+    "productCode": "cvf4e",
+    "name": "product 6",
+    "price": 61,
+    "isFavorite": true,
+    "isAvailable": true,
+    "fileName": "Ergonomic Concrete Pizza",
+    "fileURL": "../../assets/splash.jpg",
+    "created": "2021-06-21T14:13:18.762Z"
+  }
+]
